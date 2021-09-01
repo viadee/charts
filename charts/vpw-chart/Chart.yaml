@@ -3,7 +3,7 @@ name: vpw-chart
 description: Umbrella chart for vpw-analyzer & vpw-pipeline - viadee Process Warehouse - viadee Unternehmensberatung AG
 
 type: application
-version: 1.0.0
+version: 1.0.1
 appVersion: "1.16.0" # TODO: needs to be set to the right version!
 
 dependencies:
