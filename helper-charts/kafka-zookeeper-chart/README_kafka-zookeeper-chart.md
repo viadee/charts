@@ -1,4 +1,4 @@
-####The *kafka-persistent-single.yaml* contains a kafka cluster configuration, which can be applied/deployed trough the kafka operator managed by strimzi. 
+#### The *kafka-persistent-single.yaml* contains a kafka cluster configuration, which can be applied/deployed trough the kafka operator managed by strimzi. 
 
 * See __kafka strimzi operator__ here: [strimzi.io](https://strimzi.io/)
 
