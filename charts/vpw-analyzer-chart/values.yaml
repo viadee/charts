@@ -134,6 +134,11 @@ tolerations: []
 
 environment:
   secret:
+    # Specify external secret within your kubernetes cluster, which you want to use to connect to your db
+    externalPostgresqlSecret: false
+    externalPostgresqlSecretData:
+      name: name
+      key: key
     postgresql_pwd: "password"
     elastic_pwd: "password"
     elastic_username: "username"
