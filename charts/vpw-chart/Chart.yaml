@@ -3,12 +3,12 @@ name: vpw-chart
 description: Umbrella chart for vpw-analyzer, vpw-pipeline, vpw-frontend & vpw-polling-client - viadee Process Warehouse - viadee Unternehmensberatung AG
 
 type: application
-version: 1.0.0
+version: 1.0.1
 appVersion: "1.0.0"
 
 dependencies:
 - name: vpw-analyzer
-  version: 1.0.0
+  version: 1.0.1
   enabled: true
   repository: https://viadee.github.io/charts
 - name: vpw-pipeline
