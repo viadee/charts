@@ -73,8 +73,12 @@ spec:
             - name: POSTGRESQL_PWD
               valueFrom:
                 secretKeyRef:
+{{- if not .Values.environment.secret.externalPostgresqlSecret }}
                   name: {{ .Chart.Name }}-environment-secret
                   key: POSTGRESQL_PWD
+{{- else -}}
+{{- toYaml .Values.environment.secret.externalPostgresqlSecretData | nindent 18 }}
+{{- end }}
             - name: SPRING_ELASTICSEARCH_REST_PASSWORD
               valueFrom:
                 secretKeyRef:
