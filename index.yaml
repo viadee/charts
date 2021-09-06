@@ -55,6 +55,33 @@ entries:
   vpw-chart:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-09-06T11:38:23.125498247Z"
+    dependencies:
+    - enabled: true
+      name: vpw-analyzer
+      repository: https://viadee.github.io/charts
+      version: 1.0.3
+    - enabled: true
+      name: vpw-pipeline
+      repository: https://viadee.github.io/charts
+      version: 1.0.0
+    - enabled: true
+      name: vpw-frontend
+      repository: https://viadee.github.io/charts
+      version: 1.0.0
+    - enabled: true
+      name: vpw-polling-client
+      repository: https://viadee.github.io/charts
+      version: 1.0.0
+    description: Umbrella chart for vpw-analyzer, vpw-pipeline, vpw-frontend & vpw-polling-client - viadee Process Warehouse - viadee Unternehmensberatung AG
+    digest: 9e88b25dbd6fd8bdd07d2a39d294230d6beb09faa3a2cbee66083c6e6b12b8e0
+    name: vpw-chart
+    type: application
+    urls:
+    - https://github.com/viadee/charts/releases/download/vpw-chart-1.0.3/vpw-chart-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-09-06T11:23:28.74623907Z"
     dependencies:
     - enabled: true
