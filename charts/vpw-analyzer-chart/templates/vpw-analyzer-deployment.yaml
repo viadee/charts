@@ -48,7 +48,7 @@ spec:
             runAsUser: {{ .Values.cloudsqlProxy.runAsUser }}
             allowPrivilegeEscalation: {{ .Values.cloudsqlProxy.allowPrivilegeEscalation }}
           volumeMounts:
-            - name: {{ .Values.volumes.vpwCloudProxySecret.name }}-cloudsql-proxy-secret
+            - name: {{ .Values.volumes.vpwCloudProxySecret.name }}
               mountPath: {{ .Values.volumes.vpwCloudProxySecret.mountPath }}
               readOnly: {{ .Values.volumes.vpwCloudProxySecret.readOnly }}
         {{- end }}
