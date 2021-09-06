@@ -35,7 +35,7 @@ spec:
       volumes:
         - name: {{ .Values.volumes.vpwCloudProxySecret.name }}
           secret:
-            secretName: {{ .Values.volumes.vpwCloudProxySecret.secretName }}
+            secretName: {{ .Values.volumes.vpwCloudProxySecret.name }}-cloudsql-proxy-secret
        {{- end }}
 
       containers:

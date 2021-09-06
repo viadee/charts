@@ -61,8 +61,7 @@ cloudsqlProxy:
 
 volumes:
   vpwCloudProxySecret:
-    name: "vpw-cloud-proxy"
-    secretName: "vpw-cloud-proxy-secret"
+    name: "vpw-analyzer"
     mountPath: "/secrets/cloudsql"
     readOnly: true
 
