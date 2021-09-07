@@ -44,6 +44,7 @@ spec:
         - name: {{ .Values.cloudsqlProxy.name }}
           image: {{ .Values.cloudsqlProxy.image }}
           command: {{ .Values.cloudsqlProxy.command }}
+          args: {{ .Values.cloudsqlProxy.args }}
           securityContext:
             runAsUser: {{ .Values.cloudsqlProxy.runAsUser }}
             allowPrivilegeEscalation: {{ .Values.cloudsqlProxy.allowPrivilegeEscalation }}
