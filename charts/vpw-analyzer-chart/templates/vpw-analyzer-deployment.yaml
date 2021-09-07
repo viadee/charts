@@ -43,7 +43,8 @@ spec:
         {{- if .Values.cloudsqlProxy.enabled }}
         - name: {{ .Values.cloudsqlProxy.name }}
           image: {{ .Values.cloudsqlProxy.image }}
-          command: {{ .Values.cloudsqlProxy.command }}
+          command:
+{{- toYaml .Values.cloudsqlProxy.command | nindent 12 }}
           args: {{ .Values.cloudsqlProxy.args }}
           securityContext:
             runAsUser: {{ .Values.cloudsqlProxy.runAsUser }}
