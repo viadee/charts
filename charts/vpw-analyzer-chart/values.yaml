@@ -56,6 +56,7 @@ cloudsqlProxy:
   name: cloudsql-proxy
   image: example.com/image
   command: []
+  args: []
   runAsUser: 2  # non-root user
   allowPrivilegeEscalation: false
 
