@@ -65,6 +65,7 @@ vpw-analyzer:
   cloudsqlProxy:
     enabled: false
     name: cloudsql-proxy
+    secretName: cloudsql-key
     image: gcr.io/cloudsql-docker/gce-proxy:1.24.0
     command:
       arg0: '/cloud_sql_proxy'
