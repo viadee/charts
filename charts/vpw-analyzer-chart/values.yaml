@@ -143,6 +143,7 @@ environment:
     externalPostgresqlSecretData:
       name: name
       key: key
+    # If no external secret is specified, set your password for postgresql here otherwise it will be ignored
     postgresql_pwd: "password"
     elastic_pwd: "password"
     elastic_username: "username"
