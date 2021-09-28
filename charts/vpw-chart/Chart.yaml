@@ -1,9 +1,9 @@
 apiVersion: v2
 name: vpw-chart
 description: Umbrella chart for vpw-analyzer, vpw-pipeline, vpw-frontend & vpw-polling-client - viadee Process Warehouse - viadee Unternehmensberatung AG
-
+# Test workflows
 type: application
-version: 1.0.10
+version: 1.0.11
 appVersion: "1.0.0"
 
 dependencies:
