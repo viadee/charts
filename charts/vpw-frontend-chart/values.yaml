@@ -57,7 +57,7 @@ volumes:
     name: auth-secret-volume
     secretName: vpw-frontend-basic-auth-secret
     mountPath: /etc/basic_auth
-    htpasswd: placeholder # Set a htpasswd to access frontend application
+    htpasswd: demo:$2y$10$wFBQn.MYjgTRWKImDl8s/Ov44E1yf0Eg4Igcvu//CBGu1Onf82WCO # Set a htpasswd to access frontend application, here demo:demo
 
 # Frontend (nginx) containers' liveness probe.
 livenessProbe:
