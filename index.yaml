@@ -413,6 +413,16 @@ entries:
   vpw-frontend:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-10-22T08:46:06.334107649Z"
+    description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
+    digest: a3bc285ad31ad8e68ef5f8e704de2a63cdf8def4d47f4137f4cf099bf80e1e44
+    name: vpw-frontend
+    type: application
+    urls:
+    - https://github.com/viadee/charts/releases/download/vpw-frontend-1.0.2/vpw-frontend-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-10-22T07:20:23.784358877Z"
     description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
     digest: 1a365ac5dcd58792fbcc0cb44984c4ae724ff45697be6bd6796368fb47bfd1ce
