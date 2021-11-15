@@ -583,7 +583,12 @@ vpw-polling-client:
 
   environment:
     secret:
-      # Camunda password for authentication
+      # Camunda password to set for authentication from external secret
+      externalCamundaSecret: false
+      externalCamundaSecretData:
+        name: name
+        key: key
+      # Camunda password to set directly here if no externalCamundaSecret is specified
       camundaPassword: "password"
     configMap:
       # Camunda rest url to connect to camunda rest engine
