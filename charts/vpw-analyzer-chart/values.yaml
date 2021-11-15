@@ -144,9 +144,9 @@ environment:
       name: name
       key: key
     # If no external secret is specified, set your password for postgresql here otherwise it will be ignored
-    postgresql_pwd: "password"
-    elastic_pwd: "password"
-    elastic_username: "username"
+    postgresql_pwd: "vpw"
+    elastic_pwd: "elastic"
+    elastic_username: "elastic"
     cloud_sql_credentials: placeholder
   # Specify parameters of analyzer application
   configMap:
