@@ -154,9 +154,9 @@ vpw-analyzer:
       externalPostgresqlSecretData:
         name: name
         key: key
-      postgresql_pwd: "password"
-      elastic_pwd: "password"
-      elastic_username: "username"
+      postgresql_pwd: "vpw"
+      elastic_pwd: "elastic"
+      elastic_username: "elastic"
       cloud_sql_credentials: placeholder
     # Specify parameters of analyzer application
     configMap:
@@ -314,7 +314,7 @@ vpw-pipeline:
   environment:
     secret:
       # PWD to connect to elasticsearch
-      elastic_pwd: "password"
+      elastic_pwd: "elastic"
     # Specify parameters of pipeline application
     configMap:
       # Kafka bootstrap server address
@@ -589,12 +589,12 @@ vpw-polling-client:
         name: name
         key: key
       # Camunda password to set directly here if no externalCamundaSecret is specified
-      camundaPassword: "password"
+      camundaPassword: "demo"
     configMap:
       # Camunda rest url to connect to camunda rest engine
       camundaRestUrl: http://camunda-webapp-camunda-bpm-platform:8080/engine-rest/
       # Camunda username for authentication
-      camundaRestUsername: username
+      camundaRestUsername: demo
       # Application (Tomcat) server port
       serverPort: 8081
       # Time zone used for formatting timestamps provided to camunda rest api (Default: System timezone)
