@@ -317,8 +317,8 @@ vpw-pipeline:
       elastic_pwd: "elastic"
     # Specify parameters of pipeline application
     configMap:
-      # Kafka bootstrap server address
-      kafka_bootstrap_servers: "vpw-kafka-0.vpw-kafka-brokers.default.svc:9192"
+      # Kafka bootstrap server address (namespace vpw here)
+      kafka_bootstrap_servers: "vpw-kafka-0.vpw-kafka-brokers.vpw.svc:9192"
       # Spring elasticsearch rest uri in your environment
       spring_elasticsearch_rest_uris: "http://vpw-master:9200"
       # Application (Tomcat) server port
@@ -599,8 +599,8 @@ vpw-polling-client:
       serverPort: 8081
       # Time zone used for formatting timestamps provided to camunda rest api (Default: System timezone)
       timeZone: CEST
-      # Kafka bootstrap server url to connect to kafka broker
-      kafkaBootstrapServers: vpw-kafka-0.vpw-kafka-brokers.default.svc:9092
+      # Kafka bootstrap server url to connect to kafka broker (namespace vpw here)
+      kafkaBootstrapServers: vpw-kafka-0.vpw-kafka-brokers.vpw.svc:9092
       # Intervals of data polling
       pollingRuntimeDataIntervalInMs: 30000
       # Last polled file
