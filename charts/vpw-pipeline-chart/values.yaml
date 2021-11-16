@@ -125,8 +125,8 @@ environment:
     elastic_pwd: "elastic"
   # Specify parameters of pipeline application
   configMap:
-    # Kafka bootstrap server address
-    kafka_bootstrap_servers: "vpw-kafka-0.vpw-kafka-brokers.default.svc:9192"
+    # Kafka bootstrap server address (namespace vpw here)
+    kafka_bootstrap_servers: "vpw-kafka-0.vpw-kafka-brokers.vpw.svc:9192"
     # Spring elasticsearch rest uri in your environment
     spring_elasticsearch_rest_uris: "http://vpw-master:9200"
     # Application (Tomcat) server port
