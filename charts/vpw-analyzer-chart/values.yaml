@@ -7,7 +7,7 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
+# Values Änderung TEst
 image:
   repository: "public.ecr.aws/viadee/vpw-analyzer"
   pullPolicy: IfNotPresent
