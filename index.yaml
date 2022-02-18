@@ -146,6 +146,16 @@ entries:
     version: 1.0.0
   vpw-polling-client:
   - apiVersion: v2
+    appVersion: 2.0.1
+    created: "2022-02-18T15:57:09.590465495Z"
+    description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
+    digest: 7a0642e60048df671f0427eb7de661442a184f4589144ac601d0137d65ce006a
+    name: vpw-polling-client
+    type: application
+    urls:
+    - https://github.com/viadee/charts/releases/download/vpw-polling-client-1.0.2/vpw-polling-client-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: 2.0.0
     created: "2021-12-29T13:13:31.13359374Z"
     description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
