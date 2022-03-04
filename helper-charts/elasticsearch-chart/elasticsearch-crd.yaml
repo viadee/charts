@@ -3,7 +3,7 @@ kind: Elasticsearch
 metadata:
   name: vpw
 spec:
-  version: 8.0.1 # RICHITGE VERSION ??? Bedeutung der Version?
+  version: 8.0.1
   nodeSets:
     - name: default
       count: 1
