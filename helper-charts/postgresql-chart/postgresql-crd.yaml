@@ -2,7 +2,7 @@ kind: "postgresql"
 apiVersion: "acid.zalan.do/v1"
 
 metadata:
-  name: "vpw"
+  name: "acid-postgresql"
   labels:
     team: acid
 spec:
