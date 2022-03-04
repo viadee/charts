@@ -1,0 +1,20 @@
+apiVersion: elasticsearch.k8s.elastic.co/v1
+kind: Elasticsearch
+metadata:
+  name: vpw
+spec:
+  version: 8.0.1 # RICHITGE VERSION ??? Bedeutung der Version?
+  nodeSets:
+    - name: default
+      count: 1
+      podTemplate:
+        spec:
+          containers:
+            - name: elasticsearch
+              resources:
+                requests:
+                  memory: 4Gi
+                  cpu: 2
+                limits:
+                  memory: 4Gi
+
