@@ -162,6 +162,16 @@ entries:
   vpw-pipeline:
   - apiVersion: v2
     appVersion: 7.0.1
+    created: "2022-03-07T15:46:32.168370028Z"
+    description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
+    digest: 2c9421b58043b88bcc5b1c0f6e4ebf9e5d288430276df7bafa4afecb4e85646c
+    name: vpw-pipeline
+    type: application
+    urls:
+    - https://github.com/viadee/charts/releases/download/vpw-pipeline-1.0.2/vpw-pipeline-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 7.0.1
     created: "2022-02-18T15:55:30.14722125Z"
     description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
     digest: 48839cf2d5fcc277b0de0f7ee8dde222453c001f338837b059a924cac5985bb1
