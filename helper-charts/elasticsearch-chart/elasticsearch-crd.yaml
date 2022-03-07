@@ -4,6 +4,9 @@ metadata:
   name: elasticsearch
 spec:
   version: 7.15.1
+  auth:
+    fileRealm:
+      - secretName: elasticsearch-es-vpw-user-realm
   nodeSets:
     - name: default
       count: 1
