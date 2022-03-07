@@ -1,9 +1,9 @@
 apiVersion: elasticsearch.k8s.elastic.co/v1
 kind: Elasticsearch
 metadata:
-  name: vpw
+  name: elasticsearch
 spec:
-  version: 8.0.1
+  version: 7.15
   nodeSets:
     - name: default
       count: 1
