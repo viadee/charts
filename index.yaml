@@ -14,6 +14,16 @@ entries:
   vpw-analyzer:
   - apiVersion: v2
     appVersion: 7.0.1
+    created: "2022-03-07T15:49:09.391902612Z"
+    description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
+    digest: c840baaa47bc7f09928a33e1f9c0a9701a55f51a065050165251d0a6568c8d5d
+    name: vpw-analyzer
+    type: application
+    urls:
+    - https://github.com/viadee/charts/releases/download/vpw-analyzer-1.0.2/vpw-analyzer-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 7.0.1
     created: "2022-02-21T08:45:16.832941347Z"
     description: A Helm chart for Kubernetes - component of The viadee Process Warehouse - viadee Unternehmensberatung AG
     digest: 784de8e4b9b93e147932244d87cdc2c31394388cb9b5f0c8ba4a0700f9999e02
