@@ -15,7 +15,7 @@ spec:
   users:
     vpw: []
   databases:
-    vpw-db: vpw
+    vpw_db: vpw
   allowedSourceRanges:
   # IP ranges to access your cluster go here
 
