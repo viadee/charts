@@ -16,12 +16,17 @@ spec:
           - data
         node.attr.attr_name: attr_value
         node.store.allow_mmap: false
+        xpack.security.authc:
+          anonymous:
+            username: anonymous
+            roles: user
+            authz_exception: false
+        http:
+          tls:
+            selfSignedCertificate:
+              disabled: true
       podTemplate:
         spec:
-          http:
-            tls:
-              selfSignedCertificate:
-                disabled: true
           initContainers:
             - name: sysctl
               securityContext:
@@ -35,4 +40,3 @@ spec:
                   cpu: 2
                 limits:
                   memory: 4Gi
-
