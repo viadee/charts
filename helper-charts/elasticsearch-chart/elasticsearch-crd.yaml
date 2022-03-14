@@ -21,10 +21,6 @@ spec:
             username: anonymous
             roles: user
             authz_exception: false
-        http:
-          tls:
-            selfSignedCertificate:
-              disabled: true
       podTemplate:
         spec:
           initContainers:
