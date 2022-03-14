@@ -10,6 +10,12 @@ spec:
   nodeSets:
     - name: default
       count: 1
+      config:
+        node.roles:
+          - master
+          - data
+        node.attr.attr_name: attr_value
+        node.store.allow_mmap: false
       podTemplate:
         spec:
           initContainers:
