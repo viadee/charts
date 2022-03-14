@@ -20,11 +20,11 @@ spec:
           - data
         node.attr.attr_name: attr_value
         node.store.allow_mmap: false
-        xpack.security.authc:
-          anonymous:
-            username: vpw-elastic-user
-            roles: user
-            authz_exception: false
+#        xpack.security.authc:
+#          anonymous:
+#            username: vpw-elastic-user
+#            roles: user
+#            authz_exception: false
       podTemplate:
         spec:
           initContainers:
