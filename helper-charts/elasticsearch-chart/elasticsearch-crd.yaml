@@ -18,6 +18,10 @@ spec:
         node.store.allow_mmap: false
       podTemplate:
         spec:
+          http:
+            tls:
+              selfSignedCertificate:
+                disabled: true
           initContainers:
             - name: sysctl
               securityContext:
