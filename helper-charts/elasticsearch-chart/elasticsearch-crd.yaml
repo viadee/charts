@@ -13,7 +13,7 @@ spec:
         disabled: true
   nodeSets:
     - name: default
-      count: 1
+      count: 2
       config:
         node.roles:
           - master
