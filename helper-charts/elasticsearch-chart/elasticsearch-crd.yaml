@@ -48,6 +48,7 @@ spec:
                         REPLICA_COUNT=1
                         ES_URL=http://localhost:9200
                         while [[ "$(curl -s -o /dev/null -w '%{http_code}\n' $ES_URL)" != "200" ]]; do sleep 1; done
+                        curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":['\""$INDEX_PATTERN"\"'],"settings":{"number_of_replicas":'$REPLICA_COUNT'}}'
     - name: data
       count: 1
       config:
