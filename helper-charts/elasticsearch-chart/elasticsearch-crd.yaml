@@ -13,7 +13,7 @@ spec:
         disabled: true
   nodeSets:
     - name: default
-      count: 2
+      count: 1
       config:
         node.roles:
           - master
@@ -49,7 +49,7 @@ spec:
                         ES_URL=http://localhost:9200
                         while [[ "$(curl -s -o /dev/null -w '%{http_code}\n' $ES_URL)" != "200" ]]; do sleep 1; done
     - name: data
-      count: 2
+      count: 1
       config:
         node.roles:
           - data
@@ -66,10 +66,10 @@ spec:
             - name: elasticsearch
               resources:
                 requests:
-                  memory: 8Gi
+                  memory: 4Gi
                   cpu: 2
                 limits:
-                  memory: 8Gi
+                  memory: 4Gi
               lifecycle:
                 postStart:
                   exec:
