@@ -13,31 +13,10 @@ spec:
         disabled: true
   nodeSets:
     - name: default
-      count: 3
+      count: 4
       config:
         node.roles:
           - master
-        node.attr.attr_name: attr_value
-        node.store.allow_mmap: false
-      podTemplate:
-        spec:
-          initContainers:
-            - name: sysctl
-              securityContext:
-                privileged: true
-              command: [ 'sh', '-c', 'sysctl -w vm.max_map_count=262144' ]
-          containers:
-            - name: elasticsearch
-              resources:
-                requests:
-                  memory: 2Gi
-                  cpu: 2
-                limits:
-                  memory: 2Gi
-    - name: data
-      count: 3
-      config:
-        node.roles:
           - data
         node.attr.attr_name: attr_value
         node.store.allow_mmap: false
@@ -53,6 +32,28 @@ spec:
               resources:
                 requests:
                   memory: 2Gi
-                  cpu: 2
+                  cpu: 1
                 limits:
                   memory: 2Gi
+#    - name: data
+#      count: 3
+#      config:
+#        node.roles:
+#          - data
+#        node.attr.attr_name: attr_value
+#        node.store.allow_mmap: false
+#      podTemplate:
+#        spec:
+#          initContainers:
+#            - name: sysctl
+#              securityContext:
+#                privileged: true
+#              command: [ 'sh', '-c', 'sysctl -w vm.max_map_count=262144' ]
+#          containers:
+#            - name: elasticsearch
+#              resources:
+#                requests:
+#                  memory: 2Gi
+#                  cpu: 2
+#                limits:
+#                  memory: 2Gi
