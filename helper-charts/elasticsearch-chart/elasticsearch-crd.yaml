@@ -13,7 +13,7 @@ spec:
         disabled: true
   nodeSets:
     - name: default
-      count: 1
+      count: 3
       config:
         node.roles:
           - master
@@ -30,27 +30,12 @@ spec:
             - name: elasticsearch
               resources:
                 requests:
-                  memory: 4Gi
+                  memory: 2Gi
                   cpu: 2
                 limits:
-                  memory: 4Gi
-              lifecycle:
-                postStart:
-                  exec:
-                    command:
-                      - bash
-                      - -c
-                      - |
-                        #!/bin/bash
-                        # Add a template to adjust number of shards/replicas
-                        TEMPLATE_NAME=replica_setting_template
-                        INDEX_PATTERN="logstash-*"
-                        REPLICA_COUNT=1
-                        ES_URL=http://localhost:9200
-                        while [[ "$(curl -s -o /dev/null -w '%{http_code}\n' $ES_URL)" != "200" ]]; do sleep 1; done
-                        curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":['\""$INDEX_PATTERN"\"'],"settings":{"number_of_replicas":'$REPLICA_COUNT'}}'
+                  memory: 2Gi
     - name: data
-      count: 1
+      count: 3
       config:
         node.roles:
           - data
@@ -67,22 +52,7 @@ spec:
             - name: elasticsearch
               resources:
                 requests:
-                  memory: 4Gi
+                  memory: 2Gi
                   cpu: 2
                 limits:
-                  memory: 4Gi
-              lifecycle:
-                postStart:
-                  exec:
-                    command:
-                     - bash
-                     - -c
-                     - |
-                       #!/bin/bash
-                       # Add a template to adjust number of shards/replicas
-                       TEMPLATE_NAME=replica_setting_template
-                       INDEX_PATTERN="logstash-*"
-                       REPLICA_COUNT=1
-                       ES_URL=http://localhost:9200
-                       while [[ "$(curl -s -o /dev/null -w '%{http_code}\n' $ES_URL)" != "200" ]]; do sleep 1; done
-                       curl -XPUT "$ES_URL/_template/$TEMPLATE_NAME" -H 'Content-Type: application/json' -d'{"index_patterns":['\""$INDEX_PATTERN"\"'],"settings":{"number_of_replicas":'$REPLICA_COUNT'}}'
+                  memory: 2Gi
