@@ -35,7 +35,7 @@ spec:
                 limits:
                   memory: 4Gi
     - name: data
-      count: 4
+      count: 2
       config:
         node.roles:
           - data
@@ -52,7 +52,7 @@ spec:
             - name: elasticsearch
               resources:
                 requests:
-                  memory: 4Gi
+                  memory: 8Gi
                   cpu: 2
                 limits:
-                  memory: 4Gi
+                  memory: 8Gi
